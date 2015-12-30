@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Videowrapper for NRC",
+  "description": "Creates proper responsive video embeds for nrc.nl from YouTube and Vimeo",
+  "version": "0.01",
+  "content_scripts": [
+    {
+    "matches": ["*://*.youtube.com/*", "*://*.vimeo.com/*"],
+    "js": ["content.js"]
+    }
+  ],
+  "permissions": ["clipboardWrite"],
+  "background": {
+  "scripts": ["background.js"]
+},
+  "browser_action": {
+  "default_icon": "icon.png"
+  }
+}
