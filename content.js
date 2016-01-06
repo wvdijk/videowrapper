@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener(
         } else if (/^(.*\.)?vimeo\./.test(window.location.host)) {
           var re = /(https?:\/\/vimeo\.com\/)(\d+)/;
           var videoId = url.replace(re, '$2');
-          var embed = '<div class="videowrapper"><iframe src="https://player.vimeo.com/video/' +videoId + ' width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
+          var embed = '<div class="videowrapper"><iframe src="https://player.vimeo.com/video/' +videoId + '" width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
           clippy(embed);
         } else {
           alert('Sorry, this site is not supported (yet)');
